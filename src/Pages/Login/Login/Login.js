@@ -2,7 +2,7 @@ import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import background from "../../../images/bannerbackground.png";
 import logo from "../../../images/logo2.png";
@@ -10,6 +10,9 @@ import logo from "../../../images/logo2.png";
 const Login = () => {
     const navigate = useNavigate();
     const [error, setError] = useState("");
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const [signInWithEmailAndPassword, user, loading, hookError] =
         useSignInWithEmailAndPassword(auth);
@@ -22,7 +25,7 @@ const Login = () => {
 
     useEffect(() => {
         if (user) {
-            navigate("/");
+            navigate(from, { replace: true });
         }
     }, [user]);
 
