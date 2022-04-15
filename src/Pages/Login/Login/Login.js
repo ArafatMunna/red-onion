@@ -1,13 +1,12 @@
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
-import background from "../../../images/bannerbackground.png";
-import logo from "../../../images/logo2.png";
 
 const Login = () => {
+    const background = process.env.PUBLIC_URL + "images/bannerbackground.png";
+    const logo  = process.env.PUBLIC_URL + "images/logo2.png";
     const navigate = useNavigate();
     const [error, setError] = useState("");
     const location = useLocation();

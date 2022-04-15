@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../../images/logo.png";
 
 const Footer = () => {
+    const logo  = process.env.PUBLIC_URL + "images/logo2.png";
     return (
         <div className="bg-black">
             <div className="container text-white">

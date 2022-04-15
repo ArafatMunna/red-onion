@@ -7,19 +7,19 @@ const Foods = () => {
         <div className="my-5 container">
             <div className="d-flex justify-content-center">
                 <CustomLink
-                    className="text-decoration-none me-5 text-black"
-                    to="/"
+                    className="text-decoration-none me-5"
+                    to="/breakfast"
                 >
                     Breakfast
                 </CustomLink>
                 <CustomLink
-                    className="text-decoration-none me-5 text-black"
+                    className="text-decoration-none me-5"
                     to="lunch"
                 >
                     Lunch
                 </CustomLink>
                 <CustomLink
-                    className="text-decoration-none text-black"
+                    className="text-decoration-none"
                     to="dinner"
                 >
                     Dinner

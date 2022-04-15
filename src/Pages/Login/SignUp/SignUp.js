@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import logo from "../../../images/logo2.png";
-import background from "../../../images/bannerbackground.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 
 const SignUp = () => {
+    const background = process.env.PUBLIC_URL + "images/bannerbackground.png";
+    const logo  = process.env.PUBLIC_URL + "images/logo2.png";
     const navigate = useNavigate();
     const [error, setError] = useState("");
 

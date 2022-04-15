@@ -4,9 +4,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
-import logo from "../../../images/logo2.png";
 
 const Header = () => {
+    const logo = process.env.PUBLIC_URL + "images/logo2.png";
     const [user, loading, error] = useAuthState(auth);
 
     const handleSignOut = () => {
