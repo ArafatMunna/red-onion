@@ -5,9 +5,10 @@ import dinner3 from "../../../images/dinner/dinner3.png";
 import dinner4 from "../../../images/dinner/dinner4.png";
 import dinner5 from "../../../images/dinner/dinner5.png";
 import dinner6 from "../../../images/dinner/dinner6.png";
+import Food from "../Food/Food";
 
 const Dinner = () => {
-    const lunch = [
+    const dinner = [
         {
             id: 1,
             name: "Salmon with Grapefruit and Lentil Salad",
@@ -51,7 +52,15 @@ const Dinner = () => {
             price: 9.99,
         },
     ];
-    return <div></div>;
+    return (
+        <div className="container">
+            <div className="row">
+                {dinner.map((food) => (
+                    <Food key={food.id} food={food} />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Dinner;

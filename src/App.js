@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Breakfast from "./Pages/Home/Breakfast/Breakfast";
+import Dinner from "./Pages/Home/Dinner/Dinner";
 import Home from "./Pages/Home/Home/Home";
 import Lunch from "./Pages/Home/Lunch/Lunch";
 import Login from "./Pages/Login/Login/Login";
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/" element={<Home />}>
                     <Route path="/" element={<Breakfast />} />
                     <Route path="lunch" element={<Lunch />} />
+                    <Route path="dinner" element={<Dinner />} />
                 </Route>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />

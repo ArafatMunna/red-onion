@@ -56,7 +56,7 @@ const Lunch = () => {
         <div className="container">
             <div className="row">
                 {lunch.map((food) => (
-                    <Food key={lunch.id} food={food} />
+                    <Food key={food.id} food={food} />
                 ))}
             </div>
         </div>
